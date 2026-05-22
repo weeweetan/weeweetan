@@ -1,5 +1,8 @@
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=weeweetan&count_private=true&show_icons=true&theme=radical&include_all_commits=true&line_height=40)](https://github.com/anuraghazra/github-readme-stats)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=weeweetan&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+<!-- GitHub Stats Card -->
+[![weeweetan's GitHub stats](https://github-readme-stats.vercel.app/api?username=weeweetan&show_icons=true&count_private=true&include_all_commits=true&theme=radical&line_height=40&token=**YOUR_TOKEN**)](https://github.com/weeweetan)
+
+<!-- Top Languages Card -->
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=weeweetan&layout=compact&theme=radical&token=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)](https://github.com/weeweetan)
 <!--
 **weeweetan/weeweetan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
