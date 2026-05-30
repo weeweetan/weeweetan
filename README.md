@@ -3,7 +3,7 @@
 </p>
 
 <p align="left">
-  <img src="./profile/top-langs.svg" width="400" />
+    <img src="./profile/top-langs.svg" width="400" />
 </p>
 
 <p align="left">
