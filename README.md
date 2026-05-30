@@ -1,6 +1,14 @@
-![Stats](./profile/stats.svg)
-![Top Languages](./profile/top-langs.svg)
-![Pinned](./profile/pin-readme-tools-github-readme-stats.svg)
+<p align="left">
+  <img src="./profile/stats.svg" width="400" />
+</p>
+
+<p align="left">
+  <img src="./profile/top-langs.svg" width="400" />
+</p>
+
+<p align="left">
+  <img src="./profile/pin-readme-tools-github-readme-stats.svg" width="400" />
+</p>
 <!--
 **weeweetan/weeweetan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
