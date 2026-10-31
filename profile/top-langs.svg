@@ -13,14 +13,14 @@
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #2f80ed;
+            fill: #087f8c;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
             /* Selector detects Firefox */
             .header { font-size: 15.5px; }
           }
-          
+
     @keyframes slideInAnimation {
       from {
         width: 0;
@@ -38,7 +38,7 @@
       }
     }
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #334155;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -47,7 +47,7 @@
     .bold { font-weight: 700 }
     .lang-name {
       font: 400 11px "Segoe UI", Ubuntu, Sans-Serif;
-      fill: #434d58;
+      fill: #334155;
     }
     .stagger {
       opacity: 0;
@@ -59,9 +59,9 @@
     .lang-progress{
       animation: growWidthAnimation 0.6s ease-in-out forwards;
     }
-    
 
-          
+
+
       /* Animations */
       @keyframes scaleInAnimation {
         from {
@@ -79,11 +79,14 @@
           opacity: 1;
         }
       }
-    
-          
+
+
+
+          * { animation-duration: 0s !important; animation-delay: 0s !important; }
+          .stagger { opacity: 1; }
         </style>
 
-        
+
 
         <rect
           data-testid="card-bg"
@@ -91,13 +94,13 @@
           y="0.5"
           rx="4.5"
           height="99%"
-          stroke="#e4e2e2"
+          stroke="#d6e4eb"
           width="299"
-          fill="#fffefe"
+          fill="#f7fbfd"
           stroke-opacity="1"
         />
 
-        
+
       <g
         data-testid="card-title"
         transform="translate(25, 35)"
@@ -111,20 +114,20 @@
       >Most Used Languages</text>
     </g>
       </g>
-    
+
 
         <g
           data-testid="main-card-body"
           transform="translate(0, 55)"
         >
-          
+
     <svg data-testid="lang-items" x="25">
-      
-  
+
+
       <mask id="rect-mask">
           <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
         </mask>
-        
+
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
@@ -134,7 +137,7 @@
           height="8"
           fill="#b07219"
         />
-      
+
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
@@ -144,7 +147,7 @@
           height="8"
           fill="#e34c26"
         />
-      
+
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
@@ -154,7 +157,7 @@
           height="8"
           fill="#555555"
         />
-      
+
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
@@ -164,7 +167,7 @@
           height="8"
           fill="#4F5D95"
         />
-      
+
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
@@ -174,7 +177,7 @@
           height="8"
           fill="#f34b7d"
         />
-      
+
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
@@ -184,8 +187,8 @@
           height="8"
           fill="#663399"
         />
-      
-      
+
+
     <g transform="translate(0, 25)">
       <g transform="translate(0, 0)"><g transform="translate(0, 0)">
     <g class="stagger" style="animation-delay: 450ms">
@@ -231,9 +234,8 @@
     </g>
   </g></g>
     </g>
-  
+
     </svg>
-  
+
         </g>
       </svg>
-    

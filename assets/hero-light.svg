@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc" focusable="false">
+  <title id="title">WEEWEETAN — systems notes</title>
+  <desc id="desc">A light systems-console banner with NGINX, Linux, and eBPF labels and an abstract packet trace path.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#7891a5" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#087f70"/>
+      <stop offset="1" stop-color="#286fc0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="76%" cy="48%" r="48%">
+      <stop offset="0" stop-color="#d9edf0" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#f5f8fc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="960" height="300" fill="#f5f8fc"/>
+  <rect width="960" height="300" fill="url(#glow)"/>
+  <rect width="960" height="300" fill="url(#grid)"/>
+  <path d="M28 31H932M28 269H932M28 31V269" fill="none" stroke="#c5d3de" stroke-width="1"/>
+  <path d="M40 31V269" stroke="#087f70" stroke-opacity=".8" stroke-width="2"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="54" y="53" fill="#607789" font-size="11" letter-spacing="2.1">SYSTEMS / FIELD NOTES</text>
+    <circle cx="907" cy="48" r="3" fill="#087f70"/>
+    <text x="894" y="53" fill="#607789" font-size="10" text-anchor="end" letter-spacing="1.2">NETWORK · KERNEL · TRACE</text>
+
+    <text x="52" y="133" fill="#10202d" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="66" font-weight="760" letter-spacing="1.2">WEEWEETAN</text>
+    <path d="M56 151H439" stroke="#087f70" stroke-width="2"/>
+    <path d="M439 151H489" stroke="#286fc0" stroke-opacity=".62" stroke-width="2"/>
+    <text x="55" y="177" fill="#536a7b" font-size="12" letter-spacing="1.9">NETWORKS  /  LINUX  /  OBSERVABILITY</text>
+
+    <g transform="translate(54 198)">
+      <rect width="101" height="34" rx="3" fill="#fff" stroke="#b7c8d5"/>
+      <path d="M0 0V34" stroke="#087f70" stroke-width="2"/>
+      <text x="53" y="22" fill="#1c3343" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="1.4">NGINX</text>
+    </g>
+    <g transform="translate(165 198)">
+      <rect width="101" height="34" rx="3" fill="#fff" stroke="#b7c8d5"/>
+      <path d="M0 0V34" stroke="#286fc0" stroke-width="2"/>
+      <text x="53" y="22" fill="#1c3343" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="1.4">LINUX</text>
+    </g>
+    <g transform="translate(276 198)">
+      <rect width="88" height="34" rx="3" fill="#fff" stroke="#b7c8d5"/>
+      <path d="M0 0V34" stroke="#087f70" stroke-width="2"/>
+      <text x="47" y="22" fill="#1c3343" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="1.4">eBPF</text>
+    </g>
+    <text x="55" y="258" fill="#6d8291" font-size="10" letter-spacing="1.7">PACKETS <tspan fill="#087f70">/</tspan> EVENTS <tspan fill="#087f70">/</tspan> SYSTEMS</text>
+  </g>
+
+  <g>
+    <rect x="526.5" y="68.5" width="382" height="168" rx="4" fill="#fbfdff" fill-opacity=".88" stroke="#c2d2dd"/>
+    <path d="M527 93H908" stroke="#d0dce5"/>
+    <text x="545" y="85" fill="#607789" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.7">TRACE / PATH</text>
+    <circle cx="886" cy="81" r="2.5" fill="#286fc0"/>
+    <path d="M553 159H602V123H661V187H718V145H778V108H838V178H881" fill="none" stroke="#cfdee6" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M553 159H602V123H661V187H718V145H778V108H838V178H881" fill="none" stroke="url(#trace)" stroke-dasharray="2 17" stroke-linecap="round" stroke-width="2.5"/>
+    <path d="M553 159H602V123H661V187H718V145H778V108H838V178H881" fill="none" stroke="#4eaa9e" stroke-opacity=".42" stroke-width="1"/>
+    <g fill="#fbfdff" stroke="#087f70" stroke-width="2">
+      <circle cx="553" cy="159" r="5"/><circle cx="602" cy="123" r="5"/>
+      <circle cx="661" cy="187" r="5"/><circle cx="718" cy="145" r="5"/>
+      <circle cx="778" cy="108" r="5"/><circle cx="838" cy="178" r="5"/><circle cx="881" cy="178" r="5"/>
+    </g>
+    <g fill="#7891a5">
+      <rect x="565" y="112" width="5" height="5"/><rect x="574" y="112" width="5" height="5"/><rect x="583" y="112" width="5" height="5"/>
+      <rect x="690" y="112" width="5" height="5"/><rect x="699" y="112" width="5" height="5"/>
+      <rect x="816" y="207" width="5" height="5"/><rect x="825" y="207" width="5" height="5"/><rect x="834" y="207" width="5" height="5"/>
+    </g>
+    <path d="M545 218H616M627 218H680M691 218H757M768 218H804" stroke="#c2d2dd" stroke-width="2"/>
+    <path d="M545 218H590M691 218H730" stroke="#087f70" stroke-opacity=".82" stroke-width="2"/>
+    <circle cx="881" cy="218" r="2" fill="#286fc0"/>
+  </g>
+</svg>
