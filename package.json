@@ -1,0 +1,14 @@
+{
+  "name": "weeweetan-profile-assets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render:hero": "node scripts/render-hero.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
