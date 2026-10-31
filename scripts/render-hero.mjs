@@ -1,15 +1,19 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { copyFile, mkdir, mkdtemp, readFile, rm, stat } from 'node:fs/promises';
+import { copyFile, mkdir, mkdtemp, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { staticHero } from './hero-static.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const fps = 20;
 const duration = 6;
 const frameCount = fps * duration;
+const artwork = Object.fromEntries(await Promise.all(['light', 'dark'].map(async theme => [
+  theme, await readFile(path.join(root, 'assets', `hero-${theme}.svg`), 'utf8'),
+])));
 
 function ffmpeg(args) {
   const result = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', ...args], { encoding: 'utf8' });
@@ -28,7 +32,7 @@ try {
   for (const theme of ['dark', 'light']) {
     const frames = path.join(temporary, theme);
     await mkdir(frames);
-    const svg = await readFile(path.join(root, 'assets', `hero-${theme}.svg`), 'utf8');
+    const svg = artwork[theme];
     const page = await browser.newPage({ viewport: { width: 960, height: 300 }, deviceScaleFactor: 2 });
     await page.setContent(`<html><body style="margin:0;width:960px;height:300px;overflow:hidden">${svg}</body></html>`);
     await page.evaluate(() => document.fonts.ready);
@@ -109,6 +113,7 @@ try {
   for (const theme of ['dark', 'light']) {
     await copyFile(path.join(temporary, `hero-${theme}.gif`), path.join(root, 'assets', `hero-${theme}.gif`));
   }
+  await writeFile(path.join(root, 'assets', 'hero-static.svg'), staticHero(artwork));
 } finally {
   await browser.close();
   await rm(temporary, { recursive: true, force: true });
