@@ -1,7 +1,8 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
-  <img src="./assets/hero-dark.svg" alt="Systems / Field Notes — Nginx、Linux 与 eBPF 的代码和学习笔记" width="100%">
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/hero-static.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.gif">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.gif">
+  <img src="./assets/hero-static.svg" alt="Systems / Field Notes — Nginx、Linux 与 eBPF 的代码和学习笔记" width="100%">
 </picture>
 
 <p align="center">
