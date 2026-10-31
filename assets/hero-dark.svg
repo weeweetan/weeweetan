@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc" focusable="false">
-  <title id="title">WEEWEETAN — systems notes</title>
-  <desc id="desc">A dark systems-console banner with a custom geometric WEEWEETAN wordmark, NGINX, Linux, and eBPF labels, and an abstract packet trace path.</desc>
+  <title id="title">Systems / Field Notes</title>
+  <desc id="desc">A dark systems-console banner with Systems / Field Notes headings, NGINX, Linux, and eBPF labels, and an abstract packet trace path.</desc>
   <defs>
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
       <path d="M24 0H0V24" fill="none" stroke="#8eb1c7" stroke-opacity=".075" stroke-width="1"/>
@@ -13,17 +13,6 @@
       <stop offset="0" stop-color="#163d50" stop-opacity=".48"/>
       <stop offset="1" stop-color="#08131e" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="wordmark" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f1f7fb"/>
-      <stop offset="1" stop-color="#bcd4e3"/>
-    </linearGradient>
-    <linearGradient id="signature" gradientUnits="userSpaceOnUse" x1="276" y1="0" x2="414" y2="50">
-      <stop offset="0" stop-color="#7cc7ff"/>
-      <stop offset="1" stop-color="#58e4c2"/>
-    </linearGradient>
-    <!-- Original vector letters: consistent across operating systems. -->
-    <path id="letter-w" d="M0 0H10L17 34L25 14L33 34L40 0H50L39 50H30L25 36L20 50H11Z"/>
-    <path id="letter-e" d="M0 0H32V5L28 9H10V20H27V29H10V41H32V45L27 50H0Z"/>
   </defs>
 
   <rect width="960" height="300" fill="#08131e"/>
@@ -33,28 +22,14 @@
   <path d="M40 31V269" stroke="#58e4c2" stroke-opacity=".64" stroke-width="2"/>
 
   <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
-    <text x="54" y="53" fill="#8da8ba" font-size="11" letter-spacing="2.1">SYSTEMS / FIELD NOTES</text>
+    <text x="54" y="53" fill="#8da8ba" font-size="10" letter-spacing="1.4">NETWORKS / LINUX / OBSERVABILITY</text>
     <circle cx="907" cy="48" r="3" fill="#58e4c2"/>
     <text x="894" y="53" fill="#8da8ba" font-size="10" text-anchor="end" letter-spacing="1.2">NETWORK · KERNEL · TRACE</text>
 
-    <g id="wordmark-art" transform="translate(55 86)" fill="url(#wordmark)" aria-hidden="true">
-      <use href="#letter-w"/>
-      <use href="#letter-e" x="58"/>
-      <use href="#letter-e" x="98"/>
-      <use href="#letter-w" x="138"/>
-      <use href="#letter-e" x="196"/>
-      <use href="#letter-e" x="236"/>
-      <g fill="url(#signature)">
-        <!-- TAN shares one continuous blue-to-mint gradient. -->
-        <path d="M276 0H314V9H300V45L295 50H290V9H276Z"/>
-        <path fill-rule="evenodd" d="M322 50L338 0H350L366 50H355L351 37H337L333 50ZM340 28H348L344 13Z"/>
-        <path d="M374 50V0H384L404 32V0H414V50H404L384 18V45L379 50Z"/>
-      </g>
-    </g>
-    <path d="M480 132H494V136H480Z" fill="#58e4c2"/>
-    <path d="M55 151H489" stroke="#29485c"/>
-    <path d="M55 151H107L114 144H148" fill="none" stroke="#58e4c2" stroke-width="2"/>
-    <text x="55" y="177" fill="#a9bac6" font-size="12" letter-spacing="1.9">NETWORKS  /  LINUX  /  OBSERVABILITY</text>
+    <text x="52" y="124" fill="#f1f7fb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="60" font-weight="750" letter-spacing="3">SYSTEMS</text>
+    <text x="55" y="164" fill="url(#trace)" font-size="34" font-weight="700" letter-spacing="3">FIELD NOTES</text>
+    <path d="M55 181H489" stroke="#29485c"/>
+    <path d="M55 181H107L114 174H148" fill="none" stroke="#58e4c2" stroke-width="2"/>
 
     <g transform="translate(54 198)">
       <rect width="101" height="34" rx="3" fill="#102231" stroke="#345366"/>
