@@ -18,37 +18,28 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - name: Generate light stats card
-        uses: stats-organization/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be # v1
+      # Keep the same renderer revision as the previous action, with a narrow
+      # compatibility patch for repository-scoped GITHUB_TOKEN credentials.
+      - name: Check out statistics renderer
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&bg_color=f7fbfd&title_color=087f8c&text_color=334155&icon_color=0284c7&border_color=d6e4eb&disable_animations=true
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: stats-organization/github-readme-stats
+          ref: d79be7a9fd50ce38aef89306c8a1185fc0443bc7
+          path: .stats-renderer
+          persist-credentials: false
 
-      - name: Generate dark stats card
-        uses: stats-organization/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be # v1
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&bg_color=08131e&title_color=58e4c2&text_color=b8c9d6&icon_color=7cc7ff&border_color=294052&disable_animations=true
-          path: profile/stats-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: "24"
 
-      - name: Generate light language card
-        uses: stats-organization/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be # v1
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&bg_color=f7fbfd&title_color=087f8c&text_color=334155&border_color=d6e4eb&disable_animations=true
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install renderer dependencies
+        working-directory: .stats-renderer
+        run: npm ci --omit=dev --ignore-scripts
 
-      - name: Generate dark language card
-        uses: stats-organization/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be # v1
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&bg_color=08131e&title_color=58e4c2&text_color=b8c9d6&border_color=294052&disable_animations=true
-          path: profile/top-langs-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate profile cards
+        run: node scripts/generate-profile-cards.mjs .stats-renderer
+        env:
+          PAT_1: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check generated cards
         shell: python
